@@ -10,7 +10,7 @@
     <p>Get it done today</p>
 
     <!-- add HTML code here -->
-    <input type="text" id="userinput">
+    <input type="text" id="userInput">
     <input type="submit" value="Enter" id="enter" onclick="addItems()">
 
     <ul id="list">
@@ -26,14 +26,14 @@
 
         function addItems(){
             const list = document.getElementById('list');
-            const input = document.getElementById('itemName').value;
+            const input = document.getElementById('userInput').value;
             if(input != ""){
                 let newListItem = document.createElement('li');
                 let textNode = document.createTextNode(input);
                 newListItem.appendChild(textNode);
                 list.appendChild(newListItem);
             }
-            document.getElementById('itemName').value = "";
+            document.getElementById('userInput').value = "";
         }
         // add code here
 
