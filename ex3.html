@@ -26,10 +26,10 @@
 
         function addItems(){
             const list = document.getElementById('list');
-            const input = document.getElementById('userinput').value;
-            if(input != ""){
+            const input = document.getElementById('userinput');
+            if(input.value != ""){
                 let newListItem = document.createElement('li');
-                let textNode = document.createTextNode(input);
+                let textNode = document.createTextNode(input.value);
                 newListItem.appendChild(textNode);
                 list.appendChild(newListItem);
             }
