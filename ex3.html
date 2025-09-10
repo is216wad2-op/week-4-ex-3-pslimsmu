@@ -1,28 +1,44 @@
 <html>
-   <head>
-      <title>Event Handling</title>
-   </head>
-   <body>
-     
-      <h1>Shopping List</h1>
-      <p>Get it done today</p>
-      
-        <!-- add HTML code here -->
 
-      <ul>
-         <li>Notebook</li>
-         <li>Jello</li>
-         <li>Spinach</li>
-         <li>Rice</li>
-         <li>Birthday Cake</li>
-         <li>Candles</li>
-      </ul>
-      
-      <script>
-      
+<head>
+    <title>Event Handling</title>
+</head>
+
+<body>
+
+    <h1>Shopping List</h1>
+    <p>Get it done today</p>
+
+    <!-- add HTML code here -->
+    <input type="text" id="itemName">
+    <input type="submit" value="Submit" onclick="addItems()">
+
+    <ul id="list">
+        <li>Notebook</li>
+        <li>Jello</li>
+        <li>Spinach</li>
+        <li>Rice</li>
+        <li>Birthday Cake</li>
+        <li>Candles</li>
+    </ul>
+
+    <script>
+
+        function addItems(){
+            const list = document.getElementById('list');
+            const input = document.getElementById('itemName').value;
+            if(input != ""){
+                let newListItem = document.createElement('li');
+                let textNode = document.createTextNode(input);
+                newListItem.appendChild(textNode);
+                list.appendChild(newListItem);
+            }
+            document.getElementById('itemName').value = "";
+        }
         // add code here
 
-      </script>
- 
-   </body>
+    </script>
+
+</body>
+
 </html>
